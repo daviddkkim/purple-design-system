@@ -1,41 +1,47 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
-import { withKnobs, boolean } from "@storybook/addon-knobs" 
+import { Button, PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
 import { action } from "@storybook/addon-actions";
+import { ArgsTable } from '@storybook/addon-docs/blocks';
+import { CloseIcon} from "../assets"
 
 
-<Meta title="Buttons" component={PrimaryButton} />
+<Meta 
+  title="Buttons" 
+  component={Button}
+/>
 
-# Buttons
 
-Buttons are used to trigger actions within an application.
+# Button
 
-## Usage
+Buttons are used to trigger internal actions within web applications.
 
-Buttons are used to trigger internal actions within your web applications.
-
-## Primary Buttons
-
-Primary buttons are used as a call to action and indicate the most important action on a page.
+export const Template = (args) => <Button {...args} />
 
 <Preview withToolbar>
-  <Story name="primary">
-    <PrimaryButton disabled={boolean("Disabled", false)} onClick= {action('button-click')}>Hello world</PrimaryButton>
+  <Story 
+    name="primary" 
+  >
+    {Template.bind({})}
   </Story>
 </Preview>
 
-## Secondary Buttons
+<ArgsTable of={Button}/>
 
-Primary buttons are used as a call to action and indicate the most important action on a page.
 
-<Story name="secondary">
-  <SecondaryButton>Hello world</SecondaryButton>
+## All
+
+<Story name="All">
+  <Button size="small">small </Button>
+  <Button size="medium">medium </Button>
+  <Button size="large">large </Button>
+  <Button size="small" type= "primary"> primary </Button>
+  <Button size="small" type= "secondary"> secondary </Button>
+  <Button size="small" type= "tertiary"> tertiary </Button>
+  <Button size="small" containsIcon> 
+    <CloseIcon/> 
+  </Button> 
 </Story>
 
-## Tertiary Buttons
-
-Primary buttons are used as a call to action and indicate the most important action on a page.
 
 <Story name="tertiary">
-  <TertiaryButton>Hello world</TertiaryButton>
 </Story>

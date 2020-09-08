@@ -3,6 +3,7 @@ import { primaryFont } from "./typography";
 
 export const defaultTheme = {
     primaryColor: purple[300],
+    inverseColor: neutral[100],
     primaryColorHover: purple[200],
     primaryColorACtive: purple[100],
     textColorOnPrimary: neutral[100],
@@ -24,11 +25,12 @@ export const defaultTheme = {
         successColorHover: green[200],
         successColorActive: green[300]
       }
-}
+} 
 
 export const darkTheme = {
   primaryColor: neutral[100],
-  primaryHoverColor: neutral[500],
+  inverseColor: purple[300],
+  primaryColorHover: neutral[300],
   primaryActiveColor: neutral[300],
   formElementBackground: purple[100],
   textOnFormElementBackground: neutral[100],

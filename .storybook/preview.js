@@ -1,21 +1,9 @@
 import { withContexts } from "@storybook/addon-contexts/react";
 import { contexts } from "./contexts";
-import { withKnobs} from "@storybook/addon-knobs"
 
-/*addParameters({
-  backgrounds: [
-    { 
-      name: "Default theme",
-      value: "#ffffff", 
-      default: true 
-    },
-    { 
-      name: "Dark theme", 
-      value: "#896B99" 
-    }
-  ]
-});*/
+
 export const parameters = {
+  controls: { expanded: true },
   backgrounds: {
       default: 'Default theme',
       values: [
@@ -26,13 +14,12 @@ export const parameters = {
           },
           { 
             name: "Dark theme", 
-            value: "#896B99" 
+            value: "#4a4b53" 
           },
         ],
       }
     }
 
 export const decorators = [
-  withContexts(contexts),
-  withKnobs
+  withContexts(contexts)
 ]
