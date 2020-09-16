@@ -1,0 +1,24 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+import { typeScale } from '../utils';
+
+<Meta title="Design System/Typography" />
+
+# Typography
+
+**Font:** Roboto Mono
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+<Typeset
+  fontSizes={[
+    typeScale.header1,
+    typeScale.header2,
+    typeScale.header3,
+    typeScale.header4,
+    typeScale.header5,
+    typeScale.paragraph,
+    typeScale.helperText,
+    typeScale.copyrightText,
+  ]}
+/>
