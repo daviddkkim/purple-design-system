@@ -8,7 +8,7 @@ PDS components are written in React and it requires Storybook version 5.2-beta a
 
 Add SDS to your project.
 
-`npm install --save TODO`
+`npm install --save purple-design-library`
 
 ### **Use**
 
